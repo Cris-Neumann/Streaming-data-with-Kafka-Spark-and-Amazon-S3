@@ -16,4 +16,4 @@ El esquema general del modo en que se relacionan las partes del sistema es el si
 ![streaming_data_kafka_spark_S3](https://github.com/Cris-Neumann/Streaming-data-with-Kafka-Spark-and-Amazon-S3/assets/99703152/6ac753d1-a994-4223-b315-69f56adcbf1c)
 
 ## Instalaciones adicionales
-Adicional a las librerías detallas en archivo requirements.txt, es necesario instalar el conector ODBC (Open Database Connectivity) para SQL Server: ODBC Driver 18: https://acortar.link/lsyUnp.
+Adicional a la instalación de Docker y Docker Compose, es necesario instalar el conector ODBC (Open Database Connectivity) para SQL Server: ODBC Driver 18: https://acortar.link/lsyUnp.
