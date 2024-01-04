@@ -16,4 +16,9 @@ El esquema general del modo en que se relacionan las partes del sistema es el si
 ![streaming_data_kafka_spark_S3](https://github.com/Cris-Neumann/Streaming-data-with-Kafka-Spark-and-Amazon-S3/assets/99703152/6ac753d1-a994-4223-b315-69f56adcbf1c)
 
 ## Instalaciones adicionales
-Adicional a la instalación de Docker y Docker Compose, es necesario instalar el conector ODBC (Open Database Connectivity) para SQL Server: ODBC Driver 18: https://acortar.link/lsyUnp.
+Se necesitan básicamente 4 instalaciones previas para ejecutar este streaming de datos:
+  1. Instalación de Docker y Docker Compose en servidor a utilizar.
+  2. Crear un tópico en la WEB UI Kafdrop llamado 'project_topic', el cual funciona como intermediario de mensajes entre la API y Spark.
+  3. En Amazon S3 se debe crear un bucket llamado 'streaming-bucket-1', que cuente con una carpetaa en su interior llamada 'parquet_files' y otra 'checkpoints', para los 
+     archivos parquet generados en el streaming y los checkpoints de respaldo en S3, respectivamente.
+  4. Al activar el productor de datos (Kafka), el consumidor (Spark) debe ejecutarse con el siguiente script:
