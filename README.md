@@ -7,7 +7,7 @@
 - [Instalaciones adicionales](#Instalaciones-adicionales)
 
 ## Resumen del proyecto
-Este proyecto de streaming data en tiempo real consume información desde la API pública "Open Notify" (http://open-notify.org/), que envía la posición de la estación espacial internacional cada 5 segundos, y dichos datos son transmitidos usando la tecnología de mensajería Apache Kafka (productor de mensajes), cuyos mensajes se puede monitorear en tiempo real en la WEB UI Kafdrop (http://localhost:9000/), para posteriormente canalizar dicha data en streaming hacia Apache Spark (consumidor de mensajes) para ser procesados, cambiando la estructura de los archivos json anidados de origen, y posteriormente almacenados en la nube de AWS, utilizando el servicio Amazon Simple Storage Service (Amazon S3).
+Este proyecto de streaming data en tiempo real consume información desde la API pública "Open Notify" (http://open-notify.org/), que envía la posición de la estación espacial internacional cada 5 segundos, y dichos datos son transmitidos usando la tecnología de mensajería Apache Kafka (productor de mensajes), cuyos mensajes se pueden monitorear en tiempo real en la WEB UI Kafdrop (http://localhost:9000/), para posteriormente canalizar dicha data en streaming hacia Apache Spark (consumidor de mensajes) para ser procesados, cambiando la estructura de los archivos json anidados de origen, y posteriormente almacenados en la nube de AWS, utilizando el servicio Amazon Simple Storage Service (Amazon S3).
 
 ## Arquitectura empleada
 El esquema general del modo en que se relacionan las partes del sistema es el siguiente:
