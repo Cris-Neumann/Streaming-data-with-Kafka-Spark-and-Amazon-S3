@@ -20,5 +20,13 @@ Se necesitan básicamente 4 instalaciones previas para ejecutar este streaming d
   1. Instalación de Docker y Docker Compose en servidor a utilizar.
   2. Crear un tópico en la WEB UI Kafdrop (o en la terminal) llamado 'project_topic', el cual funciona como intermediario de mensajes entre la API y Spark.
   3. En Amazon S3 se debe crear un bucket llamado 'streaming-bucket-1', que cuente con una carpeta en su interior llamada 'parquet_files' y otra 'checkpoints', para los 
-     archivos parquet generados en el streaming y los checkpoints de respaldo en S3, respectivamente.
-  4. Al activar el productor de datos (Kafka), el consumidor (Spark) debe ejecutarse con el siguiente script:
+     archivos parquet generados en el streaming y los checkpoints de respaldo en S3, respectivamente. Además, se debe poseer una access key id de AWS y una
+     secret access key de AWS, para poder ingresar a la nube de Amazon Web Services. Puede instalar una versión de prueba de AWS: https://aws.amazon.com/es/free/start-your-free-trial/
+  5. Al activar el productor de datos (Kafka), el consumidor (Spark) debe ejecutarse con el siguiente script:
+     spark-submit\
+      --master spark://spark-master:7077\
+      --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,org.apache.hadoop:hadoop-aws:3.3.1\
+      --conf spark.hadoop.fs.s3a.impl=org.apache.hadoop.fs.s3a.S3AFileSystem\
+      --conf spark.hadoop.fs.s3a.access.key=YOUR_ACCESS_KEY_ID\
+      --conf spark.hadoop.fs.s3a.secret.key=YOUR_SECRET_ACCESS_KEY\
+      /opt/spark_scripts/spark_consumer.py
