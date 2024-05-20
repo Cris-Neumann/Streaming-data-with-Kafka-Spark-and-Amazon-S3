@@ -1,5 +1,6 @@
 import logging
 from pyspark.sql import SparkSession
+from pyspark.sql.streaming import Trigger
 from pyspark.sql.functions import from_json, col
 from pyspark.sql.types import StructType, StructField, StringType, LongType
 
@@ -59,6 +60,7 @@ def start_streaming(result_df):
                     .format("parquet")\
                     .outputMode("append")\
                     .option("path", s3_bucket_path)\
+                    .trigger(Trigger.ProcessingTime("5 seconds"))
                     .option("checkpointLocation", checkpoint_location)\
                     .start()
     stream_query.awaitTermination()
