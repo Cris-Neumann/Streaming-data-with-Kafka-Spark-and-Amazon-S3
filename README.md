@@ -1,4 +1,4 @@
-<h1 align="center"> Streaming de datos en tiempo real con Apache Kafka, Spark y Amazon S3 </h1>
+<h1 align="center"> Streaming de datos en tiempo real con Apache Kafka, Spark Streaming y Amazon S3 </h1>
 
 ## Índice
 
