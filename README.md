@@ -4,7 +4,7 @@
 
 - [Resumen del proyecto](#Resumen-del-proyecto)
 - [¿Qué es Apache Kafka?](#qué-es-apache-kafka)
-- [¿Qué es Apache Spark?](#qué-es-apache-spark)
+- [¿Qué es Spark Streaming?](#qué-es-spark-streaming)
 - [Arquitectura empleada](#Arquitectura-empleada)
 - [Instalaciones adicionales](#Instalaciones-adicionales)
 
@@ -14,7 +14,7 @@ Este proyecto de streaming de datos en tiempo real consume información desde la
 ## ¿Qué es Apache Kafka?
 Apache Kafka es una plataforma de procesamiento de flujos de datos distribuida y de código abierto, y se utiliza principalmente para construir pipelines de datos en tiempo real y aplicaciones de streaming de datos, como por ejemplo: monitoreo en tiempo real, análisis de logs, procesamiento de eventos, etc.
 
-## ¿Qué es Apache Spark?
+## ¿Qué es Spark Streaming?
 Apache Spark es una plataforma de computación distribuida de código abierto diseñada para procesar grandes volúmenes de datos de manera rápida y eficiente. Spark Streaming es una extensión de Apache Spark que permite el procesamiento de flujos de datos en tiempo real. Está diseñado para procesar datos que llegan de manera continua, como logs de servidores, transacciones financieras, datos de sensores, etc.
 
 ## Arquitectura empleada
