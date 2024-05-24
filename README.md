@@ -3,11 +3,15 @@
 ## Índice
 
 - [Resumen del proyecto](#Resumen-del-proyecto)
+- [¿Qué es Apache Kafka?](#qué-es-apache-kafka)
 - [Arquitectura empleada](#Arquitectura-empleada)
 - [Instalaciones adicionales](#Instalaciones-adicionales)
 
 ## Resumen del proyecto
 Este proyecto de streaming de datos en tiempo real consume información desde la API pública "Open Notify" (http://open-notify.org/), que envía la posición de la estación espacial internacional cada 5 segundos, y dichos datos son transmitidos usando la tecnología de mensajería Apache Kafka (productor de mensajes), cuyos mensajes se pueden monitorear en tiempo real en la WEB UI Kafdrop (http://localhost:9000/), para posteriormente canalizarlos hacia Apache Spark (consumidor de mensajes) para ser procesados, cambiando la estructura de los archivos json anidados de origen, y posteriormente almacenados en la nube de AWS, utilizando el servicio Amazon Simple Storage Service (Amazon S3). La implementación de Apache Kafka y Spark se realizó con la tecnología de contenedores Docker y Docker Compose.
+
+## ¿Qué es Apache Kafka?
+Apache Kafka es una plataforma de procesamiento de flujos de datos distribuida y de código abierto, y se utiliza principalmente para construir pipelines de datos en tiempo real y aplicaciones de streaming de datos, como por ejemplo: monitoreo en tiempo real, análisis de logs, procesamiento de eventos, etc.
 
 ## Arquitectura empleada
 El esquema general del modo en que se relacionan las partes del sistema es el siguiente:
